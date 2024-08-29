@@ -1,0 +1,17 @@
+{% extends 'weather/base.html' %}
+
+{% load static %}
+
+{% block title %}Weather{% endblock %}
+
+{% block content %}
+    <h1>Weather</h1>
+    <div class="mb-3">
+        <label for="cityInput" class="form-label">Enter City</label>
+        <input type="text" id="cityInput" class="form-control" placeholder="Enter city name">
+        <button id="searchButton" class="btn btn-primary mt-2">Get Weather</button>
+    </div>
+    <div id="weatherInfo" class="mt-3">
+
+    </div>
+{% endblock %}
