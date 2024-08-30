@@ -1,3 +1,10 @@
-#weatherInfo{
+#weatherInfo {
     margin-top: 11vh;
+}
+
+h2 {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #dadada;
+    display: inline-block;
+    padding-bottom: 4px;   
 }
