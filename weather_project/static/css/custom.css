@@ -1,5 +1,9 @@
-#weatherInfo {
+#weatherInfo, h1 {
     margin-top: 11vh;
+}
+
+h1, h2 {
+    opacity: 0.9;
 }
 
 h2 {
