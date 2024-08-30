@@ -6,15 +6,22 @@ $(document).ready(function() {
                 if (data.error) {
                     $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
                 } else {
-                    $('#weatherInfo').html(`
-                        <h2>Weather in ${data.city}</h2>
-                        <p>Temperature: ${data.temperature} °C</p>
-                        <p>Description: ${data.description}</p>
-                        <img src="http://openweathermap.org/img/wn/${data.icon}.png" alt="${data.description}">
-                    `);
+                    let forecastHtml = `<h2>Weather in ${data.city}</h2>`;
+                    data.forecasts.forEach(function(forecast) {
+                        forecastHtml += `
+                            <div class="forecast">
+                                <p><strong>Time:</strong> ${forecast.datetime}</p>
+                                <p><strong>Temperature:</strong> ${forecast.temperature} °C</p>
+                                <p><strong>Description:</strong> ${forecast.description}</p>
+                                <img src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
+                            </div>
+                            <hr>
+                        `;
+                    });
+                    $('#weatherInfo').html(forecastHtml);
                 }
             }).fail(function() {
-                $('#weatherInfo').html(`<p class="text-danger">При получение данных погоды while произошла ошибка.</p>`);
+                $('#weatherInfo').html(`<p class="text-danger">При получении данных погоды произошла ошибка.</p>`);
             });
         }
     });

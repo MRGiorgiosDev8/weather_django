@@ -8,19 +8,26 @@ def index(request):
 def get_weather(request):
     api_key = '7e3d537e497ca75e7caafef828c47443'
     city = request.GET.get('city', 'Moscow')
-    url = f'http://api.openweathermap.org/data/2.5/weather?q={city}&appid={api_key}&units=metric'
+    url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric'
 
     try:
         response = requests.get(url)
         data = response.json()
         if response.status_code == 200:
-            weather_data = {
-                'city': data.get('name'),
-                'temperature': data.get('main', {}).get('temp'),
-                'description': data.get('weather', [{}])[0].get('description'),
-                'icon': data.get('weather', [{}])[0].get('icon'),
-            }
-            return JsonResponse(weather_data)
+            forecast_list = []
+            for forecast in data.get('list', [])[:5]:
+                forecast_data = {
+                    'datetime': forecast.get('dt_txt'),
+                    'temperature': forecast.get('main', {}).get('temp'),
+                    'description': forecast.get('weather', [{}])[0].get('description'),
+                    'icon': forecast.get('weather', [{}])[0].get('icon'),
+                }
+                forecast_list.append(forecast_data)
+
+            return JsonResponse({
+                'city': data.get('city', {}).get('name'),
+                'forecasts': forecast_list
+            })
         else:
             return JsonResponse({'error': 'Город не найден'}, status=404)
     except Exception as e:
