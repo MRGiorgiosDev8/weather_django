@@ -1,4 +1,8 @@
-#weatherInfo, h1 {
+#weatherInfo {
+    margin-top: 7vh;
+}
+
+h1 {
     margin-top: 11vh;
 }
 
