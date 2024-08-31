@@ -1,3 +1,4 @@
+
 {% extends 'weather/base.html' %}
 
 {% load static %}
@@ -6,6 +7,8 @@
 
 {% block content %}
     <h1 class="text-center">City Weather</h1>
-    <div id="weatherInfo" class="mt-11">
-    </div>
+<div class="map-container fixed-top d-sm-none d-lg-flex">
+ <div id="map" class="rounded-3"></div>
+</div>
+   <div id="weatherInfo" class="mt-11"></div>
 {% endblock %}

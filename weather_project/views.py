@@ -26,6 +26,8 @@ def get_weather(request):
 
             return JsonResponse({
                 'city': data.get('city', {}).get('name'),
+                'latitude': data.get('city', {}).get('coord', {}).get('lat'),
+                'longitude': data.get('city', {}).get('coord', {}).get('lon'),
                 'forecasts': forecast_list
             })
         else:
