@@ -6,9 +6,17 @@
 {% block title %}Weather App{% endblock %}
 
 {% block content %}
+
     <h1 class="text-center">City Weather</h1>
-<div class="map-container fixed-top d-sm-none d-lg-flex">
- <div id="map" class="rounded-3"></div>
-</div>
-   <div id="weatherInfo" class="mt-11"></div>
+    <div class="container d-none d-lg-block">
+        <div class=" weather-container row">
+            <div id="weatherInfo" class="col-lg-6">
+            </div>
+            <div class="map-container col-lg-6 d-flex justify-content-center align-items-center">
+                <div id="map" class="rounded-3">
+                </div>
+            </div>
+        </div>
+    </div>
+
 {% endblock %}
