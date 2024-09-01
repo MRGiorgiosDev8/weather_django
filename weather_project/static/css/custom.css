@@ -3,13 +3,13 @@
     max-width: 200px;
 }
 
-h1 {
+/* h1 {
     margin-top: 14vh;
     position: sticky;
     top: 60px;
     bottom: 11px;
     z-index: 1000;
-}
+} */
 
 h1, h2 {
     opacity: 0.9;
@@ -19,11 +19,13 @@ h2 {
     margin-bottom: 30px;
     border-bottom: 1px solid #dadada;
     display: inline-block;
-    padding-bottom: 4px;   
+    padding-bottom: 4px;
+    color: rgb(63, 62, 62);   
 }
 
 hr {
     width: 189px;
+    color:#afaeaeed;
 }
 
 #map {
@@ -45,4 +47,9 @@ hr {
     padding: 7px;
     border: 1px solid red;
     border-radius: 7px;
+}
+
+.navbar-content {
+    border-bottom: 1px solid #ebe9e9ed;
+    z-index: 1000;
 }
