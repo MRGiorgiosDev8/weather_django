@@ -24,7 +24,8 @@ $(document).ready(function() {
                         'padding': '6px',
                         'background-color': '#f8f9fa99',
                         'border-radius': '11px',
-                        'border': '1px solid #ececec'
+                        'border': '1px solid #ececec',
+                        'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
                     });
 
                     const map = L.map('map').setView([data.latitude, data.longitude], 10);
@@ -38,6 +39,11 @@ $(document).ready(function() {
                         attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>'
                     });
                     weatherLayer.addTo(map);
+
+                    $('#map').css({
+                        'border': '3px solid #ececec',
+                        'box-shadow': 'box-shadow: 0px 4px 10px rgba(7, 7, 7, 0.1)'
+                    });
                 }
             }).fail(function() {
                 $('#weatherInfo').html(`<p class="text-danger">Request error.</p>`);
