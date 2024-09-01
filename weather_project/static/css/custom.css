@@ -23,7 +23,7 @@ h2 {
 }
 
 hr {
-    width: 200px;
+    width: 189px;
 }
 
 #map {
@@ -32,11 +32,17 @@ hr {
 }
 
 .weather-container {
-    gap: 17vh;
+    gap: 14vh;
 }
 
 .map-container {
     height: 60vh;
     position: sticky;
-    top: 60px;
+    top: 40px;
+}
+
+.text-danger {
+    padding: 7px;
+    border: 1px solid red;
+    border-radius: 7px;
 }

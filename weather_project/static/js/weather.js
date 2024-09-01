@@ -6,7 +6,6 @@ $(document).ready(function() {
                 if (data.error) {
                     $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
                 } else {
-
                     let forecastHtml = `<h2>${data.city}</h2>`;
                     data.forecasts.forEach(function(forecast) {
                         forecastHtml += `
@@ -21,6 +20,13 @@ $(document).ready(function() {
                     });
                     $('#weatherInfo').html(forecastHtml);
 
+                    $('#weatherInfo').css({
+                        'padding': '6px',
+                        'background-color': '#f8f9fa99',
+                        'border-radius': '11px',
+                        'border': '1px solid #ececec'
+                    });
+
                     const map = L.map('map').setView([data.latitude, data.longitude], 10);
 
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -34,7 +40,7 @@ $(document).ready(function() {
                     weatherLayer.addTo(map);
                 }
             }).fail(function() {
-                $('#weatherInfo').html(`<p class="text-danger">При получении данных погоды произошла ошибка.</p>`);
+                $('#weatherInfo').html(`<p class="text-danger">Request error.</p>`);
             });
         }
     });
