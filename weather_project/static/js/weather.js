@@ -13,7 +13,7 @@ $(document).ready(function() {
                                 <p><strong>Time:</strong> ${forecast.datetime}</p>
                                 <p><strong>Temperature:</strong> ${forecast.temperature} °C</p>
                                 <p><strong>Description:</strong> ${forecast.description}</p>
-                                <img src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
+                                <img class="weather-icon" src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
                             </div>
                             <hr>
                         `;

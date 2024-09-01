@@ -11,7 +11,7 @@
     z-index: 1000;
 } */
 
-h1, h2 {
+h1, h2, .forecast p {
     opacity: 0.9;
 }
 
@@ -20,7 +20,6 @@ h2 {
     border-bottom: 1px solid #dadada;
     display: inline-block;
     padding-bottom: 4px;
-    color: rgb(63, 62, 62);   
 }
 
 hr {
@@ -29,8 +28,8 @@ hr {
 }
 
 #map {
-    width: 500px;
-    height: 300px;
+    width: 700px;
+    height: 470px;
 }
 
 .weather-container {
@@ -38,7 +37,7 @@ hr {
 }
 
 .map-container {
-    height: 60vh;
+    height: 88vh;
     position: sticky;
     top: 40px;
 }
@@ -52,4 +51,12 @@ hr {
 .navbar-content {
     border-bottom: 1px solid #ebe9e9ed;
     z-index: 1000;
+}
+
+.weather-icon {
+    filter: brightness(0.9);
+}
+
+h2, .forecast p {
+   color: rgb(63, 62, 62); 
 }
