@@ -22,7 +22,7 @@ $(document).ready(function() {
 
                     $('#weatherInfo').css({
                         'padding': '6px',
-                        'background-color': '#f8f9fa99',
+                        'background-color': 'rgba(242, 242, 242, 0.939)',
                         'border-radius': '11px',
                         'border': '1px solid #ececec',
                         'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
@@ -41,7 +41,7 @@ $(document).ready(function() {
                     weatherLayer.addTo(map);
 
                     $('#map').css({
-                        'border': '3px solid #ececec',
+                        'border': '4px solid #ececec',
                         'box-shadow': 'box-shadow: 0px 4px 10px rgba(7, 7, 7, 0.1)'
                     });
                 }
