@@ -26,6 +26,7 @@ h1 {
     background-color: #f8f9fa99;
     border: 1px solid #ececec;
     border-radius: 11px;
+    letter-spacing: 1px;
 }
 
 h1, h2, .forecast p {
@@ -45,14 +46,14 @@ hr {
 }
 
 #map {
-    width: 700px;
-    height: 500px;
+    width: 600px;
+    height: 400px;
     margin: 0 auto;
 }
 
-.weather-container {
+/* .weather-container {
     gap: 14vh;
-}
+} */
 
 .map-container {
     height: 88vh;
