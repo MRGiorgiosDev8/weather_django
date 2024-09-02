@@ -54,6 +54,9 @@ $(document).ready(function() {
                         'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
                     });
 
+                    const mapTitle = '<h1 class="text-center mb-3">Map</h1>';
+                    $('#map').before(mapTitle);
+
                     const map = L.map('map').setView([data.latitude, data.longitude], 10);
 
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
