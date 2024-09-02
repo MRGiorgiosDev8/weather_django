@@ -22,7 +22,33 @@ $(document).ready(function() {
 
                     $('#weatherInfo').css({
                         'padding': '6px',
-                        'background-color': 'rgba(242, 242, 242, 0.939)',
+                        'background-color': '#f8f9fa99',
+                        'border-radius': '11px',
+                        'border': '1px solid #ececec',
+                        'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
+                    });
+
+                    let additionalInfoHtml = '';
+                    data.forecasts.forEach(function(forecast) {
+                        additionalInfoHtml += `
+                           <div class="additional-forecast">
+                                <div class="additional-info">
+                                    <p class="datetime"><strong>Time:</strong> ${forecast.datetime}</p>
+                                    <p class="humidity"><strong>Humidity:</strong> The humidity in this region is ${forecast.humidity}%</p>
+                                    <p class="pressure"><strong>Pressure:</strong> The atmospheric pressure in this region is ${forecast.pressure} hPa</p>
+                                    <p class="wind-speed"><strong>Wind Speed:</strong> The wind speed in this region is ${forecast.wind_speed} m/s</p>
+                                    ${forecast.rain ? `<p class="rain"><strong>Rain:</strong> The amount of rainfall in the last 3 hours is ${forecast.rain} mm</p>` : ''}
+                                    <p class="cloudiness"><strong>Cloudiness:</strong> The cloudiness in this region is ${forecast.clouds}%</p>
+                                </div>
+                                <hr>
+                            </div>
+                           `;
+                    });
+                    $('#additionalWeatherInfo').html(additionalInfoHtml);
+
+                    $('#additionalWeatherInfo').css({
+                        'padding': '6px',
+                        'background-color': '#f8f9fa99',
                         'border-radius': '11px',
                         'border': '1px solid #ececec',
                         'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
@@ -41,8 +67,8 @@ $(document).ready(function() {
                     weatherLayer.addTo(map);
 
                     $('#map').css({
-                        'border': '4px solid #ececec',
-                        'box-shadow': 'box-shadow: 0px 4px 10px rgba(7, 7, 7, 0.1)'
+                        'border': '3px solid #ececec',
+                        'box-shadow': '0px 4px 10px rgba(7, 7, 7, 0.1)'
                     });
                 }
             }).fail(function() {

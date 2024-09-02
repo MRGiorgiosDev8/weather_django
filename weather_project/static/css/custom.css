@@ -1,6 +1,12 @@
 #weatherInfo {
     margin-top: 7vh;
     max-width: 200px;
+    max-height: 1300px;
+}
+
+#additionalWeatherInfo {
+    margin-top: 8vh;
+    max-width: 240px;
 }
 
 /* h1 {
@@ -28,8 +34,9 @@ hr {
 }
 
 #map {
-    width: 700px;
-    height: 470px;
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
 }
 
 .weather-container {
@@ -55,13 +62,13 @@ hr {
 
 .weather-icon {
     padding: 4px;
-    background-color: rgb(197 196 196 / 88%);
+    background-color: rgb(230 230 230 / 88%);
     border-radius: 11px;
-    opacity: 0.8;
-    border: 1px solid #ffffffa3;
+    /* opacity: 0.8; */
+    border: 1px solid #dfdfdfa1;
     box-shadow: 0px 4px 10px rgba(107 107 107 / 8%);
 }
 
-h2, .forecast p {
+h2, .forecast p, .additional-forecast p {
    color: rgb(63, 62, 62); 
 }
