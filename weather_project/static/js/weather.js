@@ -6,7 +6,7 @@ $(document).ready(function() {
                 if (data.error) {
                     $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
                 } else {
-                    let forecastHtml = `<h2>${data.city}</h2>`;
+                    let forecastHtml = `<h2>${data.city} &#10144;</h2>`;
                     data.forecasts.forEach(function(forecast) {
                         forecastHtml += `
                             <div class="forecast">
