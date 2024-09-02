@@ -51,16 +51,6 @@ hr {
     margin: 0 auto;
 }
 
-/* .weather-container {
-    gap: 14vh;
-} */
-
-.map-container {
-    height: 88vh;
-    position: sticky;
-    top: 40px;
-}
-
 .text-danger {
     padding: 7px;
     border: 1px solid red;
