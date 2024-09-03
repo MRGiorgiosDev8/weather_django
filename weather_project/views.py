@@ -21,11 +21,7 @@ def get_weather(request):
                     'temperature': forecast.get('main', {}).get('temp'),
                     'description': forecast.get('weather', [{}])[0].get('description'),
                     'icon': forecast.get('weather', [{}])[0].get('icon'),
-                    'humidity': forecast.get('main', {}).get('humidity'),
-                    'pressure': forecast.get('main', {}).get('pressure'),
-                    'wind_speed': forecast.get('wind', {}).get('speed'),
-                    'rain': forecast.get('rain', {}).get('3h', 0),
-                    'clouds': forecast.get('clouds', {}).get('all')
+                    'wind_speed': forecast.get('wind', {}).get('speed')
                 }
                 forecast_list.append(forecast_data)
 
