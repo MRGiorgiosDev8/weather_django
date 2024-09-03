@@ -76,3 +76,11 @@ hr {
 h2, .forecast p, .additional-forecast p, h1 {
    color: rgb(63, 62, 62); 
 }
+
+/* Media Mobile */
+
+@media (max-width: 768px) { 
+    #weatherInfo {
+        max-width: 100%; 
+    }
+}
