@@ -16,16 +16,17 @@
 }
 
 #weatherInfo, #additionalWeatherInfo {
-    max-width: 230px;
+    max-width: 300px;
 }
 
 h1 {
     margin-top: 7vh;
     font-weight: 400;
     padding: 4px;
+    width: 100%;
     background-color: #f8f9fa99;
     border: 1px solid #ececec;
-    border-radius: 11px;
+    border-radius: 20px;
     letter-spacing: 1px;
 }
 
@@ -49,6 +50,7 @@ hr {
     width: 600px;
     height: 400px;
     margin: 0 auto;
+    z-index: 1;
 }
 
 .text-danger {
