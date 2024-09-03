@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}GlobalWeatherSphere{% endblock %}</title>
+    <title>{% block title %}WeatherSphereApp{% endblock %}</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
@@ -17,7 +17,10 @@
 <body class="d-flex flex-column min-vh-100">
     <nav class="navbar-content navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">GlobalWeatherSphere</a>
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="{% static 'images/logosun111.png' %}" class="img-fluid" alt="Logo" style="height: 40px; margin-right: 10px;">
+                WeatherSphereApp
+            </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -50,7 +53,7 @@
 
     <footer class="bg-light text-center text-lg-start py-2 mt-auto">
         <div class="container d-flex justify-content-between align-items-center">
-            <span class="text-muted">GlobalWeatherSphere</span>
+            <span class="text-muted">WeatherSphereApp &copy; 2024</span>
             <nav class="nav">
                 <a class="nav-link text-muted" href="https://github.com/MRGiorgiosDev8" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
