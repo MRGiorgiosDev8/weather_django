@@ -55,6 +55,18 @@ $(document).ready(function () {
                         'border': '3px solid #ececec',
                         'box-shadow': '0px 4px 10px rgba(7, 7, 7, 0.1)'
                     });
+
+                    gsap.set("#weatherInfo", {
+                        y: 100,
+                        opacity: 0
+                    });
+
+                    gsap.to("#weatherInfo", {
+                        y: 0,
+                        opacity: 1,
+                        duration: 0.8,
+                        ease: "power1.inOut",
+                    });
                 }
             }).fail(function () {
                 $('#weatherInfo').html(`<p class="text-danger">Request error.</p>`);
