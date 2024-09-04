@@ -116,4 +116,8 @@ h2, .forecast p, .additional-forecast p, h1, .symbol-arrow {
     .brand-span {
         font-size: 0.9rem;
     }
+
+    #navbarSearchForm {
+        margin-right: 7vh;
+    }
 }
