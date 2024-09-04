@@ -67,6 +67,14 @@ $(document).ready(function () {
                         duration: 0.8,
                         ease: "power1.inOut",
                     });
+
+                    gsap.to(".symbol-arrow", {
+                        x: 7,
+                        ease: "power1.inOut",
+                        yoyo: true,
+                        repeat: -1,
+                        duration: 0.8
+                    });
                 }
             }).fail(function () {
                 $('#weatherInfo').html(`<p class="text-danger">Request error.</p>`);
