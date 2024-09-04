@@ -1,11 +1,12 @@
 #weatherInfo {
-    margin-top: 7vh;
+    margin-top: 8vh;
     max-height: 1400px;
     max-width: 300px;
+    z-index: 1;
 }
 
 h1 {
-    margin-top: 7vh;
+    margin-top: 8vh;
     font-weight: 400;
     padding: 4px;
     width: 100%;
@@ -60,6 +61,14 @@ hr {
 
 h2, .forecast p, .additional-forecast p, h1 {
    color: rgb(63, 62, 62); 
+}
+
+.image-logo {
+    opacity: 0.9;
+}
+
+.symbol-arrow {
+    vertical-align: -2px;
 }
 
 /* Media Mobile */
