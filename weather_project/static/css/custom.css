@@ -17,7 +17,7 @@ h1 {
 }
 
 h1, h2, .forecast p {
-    opacity: 0.9;
+    opacity: 0.8;
 }
 
 h2 {
@@ -73,6 +73,31 @@ h2, .forecast p, .additional-forecast p, h1, .symbol-arrow {
     opacity: 0.9;
 }
 
+.link-footer a {
+    opacity: 0.8;
+    transition: all ease-in-out 0.3s;
+}
+
+.link-footer a:hover {
+    opacity: 1;
+}
+
+.link-footer .nav-link i {
+    font-size: 1.3rem;
+}
+
+.github-icon {
+    color: #000000d8; 
+}
+
+.telegram-icon {
+    color: #0088cce0; 
+}
+
+.gmail-icon {
+    color: #ea4435dc; 
+}
+
 /* Media Mobile */
 
 @media (max-width: 768px) { 
@@ -82,5 +107,13 @@ h2, .forecast p, .additional-forecast p, h1, .symbol-arrow {
 
     hr {
         width: 100%;
+    }
+
+    .link-footer .nav-link i {
+        font-size: 1rem; 
+    }
+
+    .brand-span {
+        font-size: 0.9rem;
     }
 }
