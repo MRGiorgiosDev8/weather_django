@@ -8,14 +8,21 @@ def index(request):
 def get_weather(request):
     api_key = '7e3d537e497ca75e7caafef828c47443'
     city = request.GET.get('city', 'Moscow')
-    url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric'
+
+    weather_url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric'
+
+    wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}'
 
     try:
-        response = requests.get(url)
-        data = response.json()
-        if response.status_code == 200:
+        weather_response = requests.get(weather_url)
+        weather_data = weather_response.json()
+
+        wiki_response = requests.get(wiki_url)
+        wiki_data = wiki_response.json()
+
+        if weather_response.status_code == 200 and 'title' in wiki_data:
             forecast_list = []
-            for forecast in data.get('list', [])[:5]:
+            for forecast in weather_data.get('list', [])[:5]:
                 forecast_data = {
                     'datetime': forecast.get('dt_txt'),
                     'temperature': forecast.get('main', {}).get('temp'),
@@ -26,12 +33,14 @@ def get_weather(request):
                 forecast_list.append(forecast_data)
 
             return JsonResponse({
-                'city': data.get('city', {}).get('name'),
-                'latitude': data.get('city', {}).get('coord', {}).get('lat'),
-                'longitude': data.get('city', {}).get('coord', {}).get('lon'),
-                'forecasts': forecast_list
+                'city': weather_data.get('city', {}).get('name'),
+                'latitude': weather_data.get('city', {}).get('coord', {}).get('lat'),
+                'longitude': weather_data.get('city', {}).get('coord', {}).get('lon'),
+                'forecasts': forecast_list,
+                'wiki_summary': wiki_data.get('extract', 'Информация недоступна'),
             })
         else:
-            return JsonResponse({'error': 'Город не найден'}, status=404)
+            return JsonResponse({'error': 'Город не найден или информация отсутствует'}, status=404)
+
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)

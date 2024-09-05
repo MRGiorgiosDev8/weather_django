@@ -6,7 +6,6 @@ $(document).ready(function () {
                 if (data.error) {
                     $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
                 } else {
-
                     $('#map').remove();
                     $('h1:contains("Map")').remove();
 
@@ -19,14 +18,23 @@ $(document).ready(function () {
                             <div class="forecast">
                                 <p><strong>Time:</strong> ${forecast.datetime}</p>
                                 <p><strong>Temperature:</strong> ${forecast.temperature} °C</p>
-                                <p><strong>Description:</strong> ${forecast.description}</p>
                                 <p><strong>Wind Speed:</strong> ${forecast.wind_speed} m/s</p>
+                                <p><strong>Description:</strong> ${forecast.description}</p>
                                 <img class="weather-icon" src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
                             </div>
                             <hr>
                         `;
                     });
+
+                    const cityInfoHtml = `
+                        <div class="city-info">
+                            <p>${data.wiki_summary}</p>
+                            ${data.wiki_image ? `<img src="${data.wiki_image}" alt="Image of ${data.city}">` : ''}
+                        </div>
+                    `;
+
                     $('#weatherInfo').html(forecastHtml);
+                    $('.city-info').html(cityInfoHtml);
 
                     $('#weatherInfo').css({
                         'padding': '6px',
@@ -40,7 +48,6 @@ $(document).ready(function () {
                     $('#map').before(mapTitle);
 
                     const map = L.map('map').setView([data.latitude, data.longitude], 10);
-
                     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
                         attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     }).addTo(map);

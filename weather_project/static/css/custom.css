@@ -1,6 +1,6 @@
 #weatherInfo {
     margin-top: 9vh;
-    max-height: 1400px;
+    /* max-height: 1400px; */
     max-width: 300px;
     z-index: 1;
 }
@@ -131,7 +131,14 @@ h2,
 
 #cityInput {
     opacity: 0.9;
+}
 
+.map-container {
+    order: 1;
+}
+
+.city-info {
+    order: 2;
 }
 
 /* Media Mobile */
