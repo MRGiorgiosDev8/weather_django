@@ -117,11 +117,6 @@ h2,
     letter-spacing: 0.7px;
 }
 
-.navbar-content {
-    padding-top: 0.1rem !important; 
-    padding-bottom: 0.1rem !important; 
-}
-
 .brand-span {
     font-family: "Play", sans-serif;
     font-weight: 100;
@@ -161,4 +156,16 @@ h2,
     #navbarSearchForm {
         margin-right: 7vh;
     }
+
+    .navbar-content {
+        padding-top: 0.4rem !important; 
+        padding-bottom: 0.4rem !important; 
+    }
 }
+
+@media (min-width: 992px) {
+    .navbar-content {
+        padding-top: 0.1rem !important; 
+        padding-bottom: 0.1rem !important; 
+    }
+  }
