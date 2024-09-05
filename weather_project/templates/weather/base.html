@@ -6,6 +6,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}WeatherSphereApp{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Yeseva+One&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static 'css/custom.css' %}" rel="stylesheet">
@@ -19,8 +24,8 @@
         <div class="container-fluid">
             <a class="navbar-brand d-flex align-items-center" href="#">
                 <img src="{% static 'images/logosun111.png' %}" id="logo" class="image-logo img-fluid" alt="Logo"
-                    style="height: 40px; margin-right: 10px;">
-                <span style="color: rgb(63, 62, 62);">WeatherSphereApp</span>
+                    style="height: 50px; margin-right: 10px;">
+                <span class="font-span">WeatherSphereApp</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -62,8 +67,7 @@
                 <a class="nav-link" href="https://t.me/mrgiorgio8" target="_blank" title="Telegram">
                     <i class="fab fa-telegram telegram-icon"></i>
                 </a>
-                <a class="nav-link" href="mailto:gerorge.oblivantsev8@gmail.com" target="_blank"
-                    title="Email">
+                <a class="nav-link" href="mailto:gerorge.oblivantsev8@gmail.com" target="_blank" title="Email">
                     <i class="fas fa-envelope gmail-icon"></i>
                 </a>
             </nav>
