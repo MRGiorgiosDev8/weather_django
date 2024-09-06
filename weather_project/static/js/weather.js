@@ -16,11 +16,11 @@ $(document).ready(function () {
                     data.forecasts.forEach(function (forecast) {
                         forecastHtml += `
                             <div class="forecast">
-                                <p><strong>Time:</strong> ${forecast.datetime}</p>
-                                <p><strong>Temperature:</strong> ${forecast.temperature} °C</p>
-                                <p><strong>Wind Speed:</strong> ${forecast.wind_speed} m/s</p>
-                                <p><strong>Description:</strong> ${forecast.description}</p>
+                                <p><strong>Дата:</strong> ${forecast.datetime}</p>
+                                <p><strong>Температура:</strong> ${forecast.temperature} °C</p>
+                                <p><strong>Скорость ветра:</strong> ${forecast.wind_speed} m/s</p>
                                 <img class="weather-icon" src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
+                                <p><strong></strong> ${forecast.description}</p>
                             </div>
                             <hr>
                         `;
@@ -29,7 +29,6 @@ $(document).ready(function () {
                     const cityInfoHtml = `
                         <div class="city-info">
                             <p>${data.wiki_summary}</p>
-                            ${data.wiki_image ? `<img src="${data.wiki_image}" alt="Image of ${data.city}">` : ''}
                         </div>
                     `;
 
@@ -42,6 +41,20 @@ $(document).ready(function () {
                         'border-radius': '11px',
                         'border': '1px solid #ececec',
                         'box-shadow': '0px 4px 10px rgba(180, 180, 180, 0.1)'
+                    });
+
+                    $('.city-info *').css({
+                        'background-color': 'transparent',  
+                        'margin': '0',  
+                        'padding': '0',  
+                        'border': 'none'  
+                    });
+
+                    $('.city-info').css({
+                        'background-color': '#f8f9fa99',
+                        'border-radius': '11px',
+                        'padding': '0', 
+                        'text-align': 'center'
                     });
 
                     const mapTitle = '<h1 class="text-center mb-3">Map</h1>';

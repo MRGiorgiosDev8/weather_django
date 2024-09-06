@@ -10,13 +10,14 @@ h1 {
     font-family: "Yeseva One", serif;
     font-weight: 100;
     font-style: normal;
+    font-size: 2.2em;
     padding: 4px;
     width: 100%;
     background-color: #f8f9fa99;
     border: 1px solid #ececec;
     border-radius: 11px;
     letter-spacing: 1px;
-    color: rgba(63, 62, 62, 0.888);
+    color: rgba(63, 62, 62, 0.933);
 }
 
 h1,
@@ -30,6 +31,7 @@ h2 {
     border-bottom: 1px solid #dadada;
     display: inline-block;
     padding-bottom: 4px;
+    letter-spacing: 1px;
 }
 
 hr {
@@ -57,7 +59,7 @@ hr {
 
 .weather-icon {
     padding: 4px;
-    background-color: rgb(230 230 230 / 88%);
+    background-color: rgb(111 111 111 / 23%);
     border-radius: 11px;
     /* opacity: 0.8; */
     border: 1px solid #dfdfdfa1;
@@ -67,8 +69,7 @@ hr {
 h2,
 .forecast p,
 .additional-forecast p,
-.symbol-arrow
-{
+.symbol-arrow {
     color: rgb(63, 62, 62);
 }
 
@@ -139,6 +140,8 @@ h2,
 
 .city-info {
     order: 2;
+    margin-top: 30px;
+    opacity: 0.8;
 }
 
 /* Media Mobile */
@@ -165,14 +168,33 @@ h2,
     }
 
     .navbar-content {
-        padding-top: 0.4rem !important; 
-        padding-bottom: 0.4rem !important; 
+        padding-top: 0.4rem !important;
+        padding-bottom: 0.4rem !important;
+    }
+
+    .text-danger {
+        margin-right: 7vh;
+    }
+
+    .map-container {
+        margin-left: 3vh;
+        padding: 0;
+    }
+
+    .city-info {
+        margin-left: 1vh;
+    }
+
+    .city-info p {
+        text-align: left;
     }
 }
 
+/* Media Large */
+
 @media (min-width: 992px) {
     .navbar-content {
-        padding-top: 0.1rem !important; 
-        padding-bottom: 0.1rem !important; 
+        padding-top: 0.1rem !important;
+        padding-bottom: 0.1rem !important;
     }
-  }
+}
