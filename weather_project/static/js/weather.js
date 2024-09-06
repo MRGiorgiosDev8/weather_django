@@ -12,7 +12,7 @@ $(document).ready(function () {
                     const mapContainer = `<div id="map" class="rounded-3 w-100"></div>`;
                     $('.map-container').append(mapContainer);
 
-                    let forecastHtml = `<h2>${data.city} <span class="symbol-arrow">&#10144;</span></h2>`;
+                    let forecastHtml = `<h2>${data.city} <img src="/static/images/iconarrow.png" alt="arrow" class="symbol-arrow" /></h2>`;
                     data.forecasts.forEach(function (forecast) {
                         forecastHtml += `
                             <div class="forecast">
