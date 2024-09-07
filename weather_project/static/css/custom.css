@@ -209,4 +209,14 @@ h2,
     .city-info p {
         width: 97%;
     }
+
+    #weatherInfo {
+        max-height: 634px;
+        overflow-y: scroll;
+        scrollbar-width: none; 
+    }
+
+    #weatherInfo::-webkit-scrollbar {
+        display: none; 
+    }
 }
