@@ -13,7 +13,6 @@ $(document).ready(function () {
 
                         $('#map').remove();
                         $('h1:contains("Map")').remove();
-
                         const mapContainer = `<div id="map" class="rounded-3 w-100"></div>`;
                         $('.map-container').append(mapContainer);
 
@@ -106,5 +105,10 @@ $(document).ready(function () {
                     $('#weatherInfo').html(`<p class="text-danger">Ошибка запроса.</p>`);
                 });
         }
+    });
+
+    $('.navbar-brand').on('click', function (e) {
+        e.preventDefault();
+        location.reload();
     });
 });
