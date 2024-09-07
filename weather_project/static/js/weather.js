@@ -2,12 +2,15 @@ $(document).ready(function () {
     $('#searchButton').on('click', function () {
         let city = $('#cityInput').val();
         if (city) {
-            fetch(`/api/weather/?city=${city}`)
+            fetch(`/api/weather/?city=${encodeURIComponent(city)}`)
                 .then(response => response.json())
                 .then(data => {
                     if (data.error) {
                         $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
                     } else {
+
+                        $('#introContainer').remove();
+
                         $('#map').remove();
                         $('h1:contains("Map")').remove();
 
@@ -22,7 +25,7 @@ $(document).ready(function () {
                                     <p><strong>Температура:</strong> ${forecast.temperature} °C</p>
                                     <p><strong>Скорость ветра:</strong> ${forecast.wind_speed} m/s</p>
                                     <img class="weather-icon" src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
-                                    <p><strong></strong> ${forecast.description}</p>
+                                    <p><strong>Описание:</strong> ${forecast.description}</p>
                                 </div>
                                 <hr>
                             `;
@@ -100,7 +103,7 @@ $(document).ready(function () {
                     }
                 })
                 .catch(() => {
-                    $('#weatherInfo').html(`<p class="text-danger">Request error.</p>`);
+                    $('#weatherInfo').html(`<p class="text-danger">Ошибка запроса.</p>`);
                 });
         }
     });
