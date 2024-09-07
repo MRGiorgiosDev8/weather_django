@@ -191,6 +191,11 @@ h2,
     .city-info p {
         text-align: left;
     }
+
+    .symbol-arrow {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 /* Media Large */

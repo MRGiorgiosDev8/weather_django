@@ -44,16 +44,16 @@ $(document).ready(function () {
                     });
 
                     $('.city-info *').css({
-                        'background-color': 'transparent',  
-                        'margin': '0',  
-                        'padding': '0',  
-                        'border': 'none'  
+                        'background-color': 'transparent',
+                        'margin': '0',
+                        'padding': '0',
+                        'border': 'none'
                     });
 
                     $('.city-info').css({
                         'background-color': '#f8f9fa99',
                         'border-radius': '11px',
-                        'padding': '0', 
+                        'padding': '0',
                         'text-align': 'center'
                     });
 
