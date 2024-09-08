@@ -29,7 +29,7 @@ class WeatherAPIView(APIView):
                 for forecast in weather_data.get('list', [])[:5]:
                     dt_str = forecast.get('dt_txt')
                     dt_obj = datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S')
-                    formatted_dt = dt_obj.strftime('%A, %d.%m.%Y %H:%M')
+                    formatted_dt = dt_obj.strftime('%A, %d.%m  %H:%M')
 
                     days_of_week = {
                         'Monday': 'Понедельник',
@@ -41,7 +41,7 @@ class WeatherAPIView(APIView):
                         'Sunday': 'Воскресенье'
                     }
                     day_of_week_ru = days_of_week[dt_obj.strftime('%A')]
-                    final_dt = f'{day_of_week_ru}, {dt_obj.strftime("%d.%m.%Y %H:%M")}'
+                    final_dt = f'{day_of_week_ru}, {dt_obj.strftime("%d.%m %H:%M")}'
 
                     forecast_data = {
                         'datetime': final_dt,

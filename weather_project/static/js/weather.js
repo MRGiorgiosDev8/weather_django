@@ -24,7 +24,7 @@ $(document).ready(function () {
                                     <p><strong>Температура:</strong> ${forecast.temperature} °C</p>
                                     <p><strong>Скорость ветра:</strong> ${forecast.wind_speed} m/s</p>
                                     <img class="weather-icon" src="http://openweathermap.org/img/wn/${forecast.icon}.png" alt="${forecast.description}">
-                                    <p><strong>Описание:</strong> ${forecast.description}</p>
+                                    <p>${forecast.description}</p>
                                 </div>
                                 <hr>
                             `;
