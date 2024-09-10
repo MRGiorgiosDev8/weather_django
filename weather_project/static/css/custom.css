@@ -150,6 +150,7 @@ h2,
 
 .intro-cards {
     margin-top: 20vh;
+    height: 60px;
 }
 
 /* Media Mobile */
@@ -219,6 +220,14 @@ h2,
     .map-container {
         padding: 0;
     }
+
+    .intro-cards {
+        margin-top: 4vh;
+        height: auto;
+        gap: 7vh;
+        height: 500px;
+
+    }
 }
 
 /* Media Large */
@@ -250,5 +259,4 @@ h2,
     #weatherInfo {
         max-height: 643px;
     }
-
 }
