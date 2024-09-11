@@ -260,3 +260,12 @@ h2,
         max-height: 643px;
     }
 }
+
+/* Media XXL */
+
+@media (max-width: 1400px) {
+    #weatherInfo, .map-container {
+        margin-top: 7vh;
+    }
+   
+}

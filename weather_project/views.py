@@ -18,19 +18,20 @@ class WeatherAPIView(APIView):
         wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}'
 
         try:
-            weather_response = requests.get(weather_url)
-            weather_data = weather_response.json()
+            weather_response = requests.get(weather_url, timeout=10)
+            wiki_response = requests.get(wiki_url, timeout=10)
 
-            wiki_response = requests.get(wiki_url)
-            wiki_data = wiki_response.json()
+            if weather_response.status_code == 200 and wiki_response.status_code == 200:
+                try:
+                    weather_data = weather_response.json()
+                    wiki_data = wiki_response.json()
+                except ValueError:
+                    return Response({'error': 'Ошибка при разборе ответа от сервера'}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
-            if weather_response.status_code == 200 and 'title' in wiki_data:
                 forecast_list = []
                 for forecast in weather_data.get('list', [])[:5]:
                     dt_str = forecast.get('dt_txt')
                     dt_obj = datetime.strptime(dt_str, '%Y-%m-%d %H:%M:%S')
-                    formatted_dt = dt_obj.strftime('%A, %d.%m  %H:%M')
-
                     days_of_week = {
                         'Monday': 'Понедельник',
                         'Tuesday': 'Вторник',
@@ -40,7 +41,7 @@ class WeatherAPIView(APIView):
                         'Saturday': 'Суббота',
                         'Sunday': 'Воскресенье'
                     }
-                    day_of_week_ru = days_of_week[dt_obj.strftime('%A')]
+                    day_of_week_ru = days_of_week.get(dt_obj.strftime('%A'), 'Неизвестный день')
                     final_dt = f'{day_of_week_ru}, {dt_obj.strftime("%d.%m %H:%M")}'
 
                     forecast_data = {
@@ -68,5 +69,7 @@ class WeatherAPIView(APIView):
             else:
                 return Response({'error': 'Город не найден или информация отсутствует'}, status=status.HTTP_404_NOT_FOUND)
 
-        except Exception as e:
+        except requests.exceptions.Timeout:
+            return Response({'error': 'Превышено время ожидания запроса'}, status=status.HTTP_504_GATEWAY_TIMEOUT)
+        except requests.exceptions.RequestException as e:
             return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
