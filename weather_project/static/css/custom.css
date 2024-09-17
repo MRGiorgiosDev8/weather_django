@@ -264,8 +264,11 @@ h2,
 /* Media XXL */
 
 @media (max-width: 1400px) {
-    #weatherInfo, .map-container {
+    .map-container {
         margin-top: 7vh;
     }
-   
+
+    #weatherInfo {
+        margin-top: 60px;
+    } 
 }
