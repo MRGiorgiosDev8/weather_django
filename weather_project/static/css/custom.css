@@ -257,18 +257,28 @@ h2,
 
 @media (min-width: 1200px) and (max-width: 1400px){
     #weatherInfo {
-        max-height: 643px;
+        max-height: 620px;
+    }
+
+    .map-container, #weatherInfo {
+        height: 70%;
+        margin-top: 9vh;
     }
 }
 
 /* Media XXL */
 
-@media (max-width: 1400px) {
+@media (min-width: 1400px) and (min-height: 1000px)  {
     .map-container {
-        margin-top: 7vh;
+        margin-top: 66px;
     }
 
     #weatherInfo {
         margin-top: 60px;
-    } 
+    }
+
+    .map-container, #weatherInfo {
+        height: 70%;
+        /* margin-top: 11vh; */
+    }
 }
