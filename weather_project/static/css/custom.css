@@ -251,34 +251,30 @@ h2,
     #weatherInfo::-webkit-scrollbar {
         display: none;
     }
+
+    .map-container, #weatherInfo {
+        height: 100%;
+        margin-top: 6vh;
+    }
+
+    .map-container {
+        margin-top: 63px;
+    }
 }
 
 /* Media 1200px */
 
 @media (min-width: 1200px) and (max-width: 1400px){
     #weatherInfo {
-        max-height: 620px;
+        max-height: 640px;
     }
 
     .map-container, #weatherInfo {
-        height: 70%;
+        height: 100%;
         margin-top: 9vh;
     }
-}
 
-/* Media XXL */
-
-@media (min-width: 1400px) and (min-height: 1000px)  {
     .map-container {
-        margin-top: 66px;
-    }
-
-    #weatherInfo {
-        margin-top: 60px;
-    }
-
-    .map-container, #weatherInfo {
-        height: 70%;
-        /* margin-top: 11vh; */
+        margin-top: 94px;
     }
 }
