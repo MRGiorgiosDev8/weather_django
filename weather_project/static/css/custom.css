@@ -19,9 +19,15 @@ h1 {
     letter-spacing: 1px;
 }
 
+.intro {
+    background-color: transparent;
+    border: none;
+}
+
 h1,
 h2,
-.forecast p {
+.forecast p,
+.btn-card {
     opacity: 0.8;
 }
 
@@ -34,8 +40,13 @@ h2 {
 }
 
 h1,
-h2 {
+h2,
+.card-body p {
     color: rgba(63, 62, 62, 0.933);
+}
+
+.card {
+    border: 1px solid #ececec;
 }
 
 hr {
@@ -149,8 +160,9 @@ h2,
 }
 
 .intro-cards {
-    margin-top: 20vh;
-    height: 60px;
+    margin-top: 17vh;
+    height: 16px;
+    padding: 0;
 }
 
 /* Media Mobile */
@@ -226,8 +238,15 @@ h2,
         height: auto;
         gap: 7vh;
         height: 500px;
-
     }
+}
+
+@media (min-width: 769px) and (max-width: 991px) {
+   .intro-cards {
+    gap: 7vh;
+    height: 100%;
+   }
+
 }
 
 /* Media Large */
@@ -252,7 +271,8 @@ h2,
         display: none;
     }
 
-    .map-container, #weatherInfo {
+    .map-container,
+    #weatherInfo {
         height: 100%;
         margin-top: 1vh;
     }
@@ -266,10 +286,12 @@ h2,
     }
 }
 
-/* Media 1200px */
+/* Media XXL */
 
 @media (min-height: 1000px) {
-    .map-container, #weatherInfo {
+
+    .map-container,
+    #weatherInfo {
         height: 100%;
         margin-top: 6vh;
     }
