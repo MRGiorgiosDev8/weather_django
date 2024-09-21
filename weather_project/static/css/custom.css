@@ -168,7 +168,7 @@ h2,
 
 .img-intro {
     margin-top: 4vh;
-    transform: translateX(8px);
+    /* transform: translateX(8px); */
     opacity: 0.9;
 }
 
@@ -188,9 +188,16 @@ h2,
     border: 3px double #ecececb2;
     border-radius: 20px;
     background-color: #f8f9fa35;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 11px;
+    padding-bottom: 11px;
     margin: 0 auto;
+    max-height: 260px;
+}
+
+.intro-images {
+    transform: translateY(-16vh);
+    padding: 0;
+    opacity: 0.8;
 }
 
 
