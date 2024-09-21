@@ -15,7 +15,7 @@ class WeatherAPIView(APIView):
         city = request.GET.get('city', 'Moscow')
 
         weather_url = f'http://api.openweathermap.org/data/2.5/forecast?q={city}&appid={api_key}&units=metric'
-        wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}'
+        wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}?redirect=true'
 
         try:
             weather_response = requests.get(weather_url, timeout=10)

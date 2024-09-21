@@ -27,20 +27,20 @@ $(document).ready(function () {
     }
 
     function initializeMap(lat, lon) {
-        if (!map) {
-            map = L.map('map').setView([lat, lon], 10);
-            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-            }).addTo(map);
-
-            const apiKey = '7e3d537e497ca75e7caafef828c47443';
-            const weatherLayer = L.tileLayer(`http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
-                attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>'
-            });
-            weatherLayer.addTo(map);
-        } else {
-            map.setView([lat, lon], 10);
+        if (map) {
+            map.remove();
         }
+
+        map = L.map('map').setView([lat, lon], 10);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        const apiKey = '7e3d537e497ca75e7caafef828c47443';
+        const weatherLayer = L.tileLayer(`http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+            attribution: '&copy; <a href="https://openweathermap.org/">OpenWeatherMap</a>'
+        });
+        weatherLayer.addTo(map);
     }
 
     function getWeatherData(city) {
