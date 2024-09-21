@@ -160,10 +160,39 @@ h2,
 }
 
 .intro-cards {
-    margin-top: 17vh;
+    margin-top: 14vh;
     height: 16px;
     padding: 0;
+    height: 300px;
 }
+
+.img-intro {
+    margin-top: 4vh;
+    transform: translateX(8px);
+    opacity: 0.9;
+}
+
+#introContainer {
+    height: 400px;
+}
+
+.container-height  {
+    height: auto;
+}
+
+.intro-header p{
+   opacity: 0.8;
+}
+
+.intro-header  {
+    border: 3px double #ecececb2;
+    border-radius: 20px;
+    background-color: #f8f9fa35;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin: 0 auto;
+}
+
 
 /* Media Mobile */
 
@@ -237,7 +266,26 @@ h2,
         margin-top: 4vh;
         height: auto;
         gap: 7vh;
-        height: 500px;
+        height: 300px;
+    }
+
+    .img-intro {
+        display: none;
+
+    }
+
+    .intro {
+        font-size: 1.8em;
+    }
+
+    #introContainer {
+        height: auto;
+    }
+
+    .lead {
+        /* text-align: left !important; */
+        width: 300px !important;
+        font-size: 1.1em;
     }
 }
 

@@ -6,7 +6,7 @@
 
 {% block content %}
 
-<div class="container vh-25" id="introContainer">
+<div class="container" id="introContainer">
     <div class="intro-header text-center">
         <h1 class="intro mb-4">WeatherSphereApp</h1>
         <p class="lead w-75 mx-auto text-center"> Этот проект позволяет искать информацию о погоде в любом городе мира,
@@ -47,7 +47,11 @@
             </div>
         </div>
     </div>
+    <div class="img-intro text-center">
+    <img src="{% static 'images/skysvg3.svg' %}" alt="Sky SVG" class="img-fluid" style="width: 100px; height: auto;">
 </div>
+</div>
+
 
 <div class="container" id="weatherContainer">
     <div class="row d-flex justify-content-center ms-lg-3">
