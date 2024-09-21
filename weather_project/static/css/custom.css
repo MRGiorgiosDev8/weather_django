@@ -176,15 +176,15 @@ h2,
     height: 400px;
 }
 
-.container-height  {
+.container-height {
     height: auto;
 }
 
-.intro-header p{
-   opacity: 0.8;
+.intro-header p {
+    opacity: 0.8;
 }
 
-.intro-header  {
+.intro-header {
     border: 3px double #ecececb2;
     border-radius: 20px;
     background-color: #f8f9fa35;
@@ -290,11 +290,22 @@ h2,
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
-   .intro-cards {
-    gap: 7vh;
-    height: 100%;
-   }
+    .intro-cards {
+        gap: 7vh;
+        height: auto;
+    }
 
+    #introContainer {
+        height: 600px;
+    }
+
+    .img-intro {
+        display: none;
+    }
+
+    .intro-header {
+        margin-top: 7vh;
+    }
 }
 
 /* Media Large */
