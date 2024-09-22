@@ -167,13 +167,13 @@ h2,
 }
 
 .img-intro {
-    margin-top: 4vh;
+    margin-top: 30vh;
     /* transform: translateX(8px); */
     opacity: 0.9;
 }
 
 #introContainer {
-    height: 400px;
+    height: 600px;
 }
 
 .container-height {
@@ -190,7 +190,7 @@ h2,
     background-color: #f8f9fa35;
     padding-top: 11px;
     padding-bottom: 11px;
-    max-height: 260px;
+    max-height: 300px;
     box-sizing: border-box;
 }
 
@@ -298,6 +298,7 @@ h2,
     .intro-header {
         padding: 3px;
         max-height: fit-content;
+        margin-top: 2vh;
     }
 
     .intro-images {
@@ -321,6 +322,7 @@ h2,
 
     .intro-header {
         margin-top: 7vh;
+        max-height: fit-content;
     }
 }
 
