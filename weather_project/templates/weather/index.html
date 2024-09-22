@@ -7,72 +7,83 @@
 {% block content %}
 
 <div class="container" id="introContainer">
-<div class="intro-header text-center">
-    <h1 class="intro mb-3">WeatherSphereApp</h1>
-    <p class="lead w-75 mx-auto text-center">
-        Этот проект позволяет искать информацию о погоде в любом городе мира, используя API OpenWeather.
-        В дополнение к погодным данным, приложение также предоставляет информацию о городе через API Wikipedia,
-        что делает его удобным инструментом для получения полного представления о выбранном месте.
-    </p>
-    <div class="intro-images d-flex justify-content-between d-none d-lg-flex">
-        <img src="{% static 'images/sunflower1.png' %}" alt="Sunflower 1" class="img-fluid" style="max-width: 90px;">
-        <img src="{% static 'images/sunflower1.png' %}" alt="Sunflower 1" class="img-fluid" style="max-width: 90px;">
+    <div class="intro-header text-center">
+        <h1 class="intro mb-3">WeatherSphereApp</h1>
+        <p class="lead w-75 mx-auto text-center">
+            Этот проект позволяет искать информацию о погоде в любом городе мира, используя API OpenWeather.
+            В дополнение к погодным данным, приложение также предоставляет информацию о городе через API Wikipedia,
+            что делает его удобным инструментом для получения полного представления о выбранном месте.
+        </p>
+        <div class="intro-images d-flex justify-content-between d-none d-lg-flex">
+            <img src="{% static 'images/sunflower1.png' %}" alt="Sunflower 1" class="img-fluid"
+                style="max-width: 90px;">
+            <img src="{% static 'images/sunflower1.png' %}" alt="Sunflower 1" class="img-fluid"
+                style="max-width: 90px;">
+        </div>
     </div>
-</div>
- <div class="intro-cards row">
-    <!-- Card 1: Получение погодных данных -->
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Актуальные погодные данные</h5>
-                <p class="card-text">
-                    OpenWeather — это популярный и надежный сервис, предоставляющий данные о погоде в режиме реального времени для городов по всему миру. Используя их API, этот проект позволяет получать точную и актуальную информацию о погодных условиях в любом городе. Вы можете узнать температуру, влажность, скорость ветра и другие важные параметры.
-                </p>
-                <p class="card-text">
-                    Введите название интересующего вас города и получите подробный прогноз на ближайшие несколько дней.
-                </p>
+    <div class="intro-cards row">
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Актуальные погодные данные</h5>
+                    <p class="card-text">
+                        OpenWeather — это популярный и надежный сервис, предоставляющий данные о погоде в режиме
+                        реального времени для городов по всему миру. Используя их API, этот проект позволяет получать
+                        точную и актуальную информацию о погодных условиях в любом городе. Вы можете узнать температуру,
+                        влажность, скорость ветра и другие важные параметры.
+                    </p>
+                    <p class="card-text">
+                        Введите название интересующего вас города и получите подробный прогноз на ближайшие несколько
+                        дней.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Информация о городе</h5>
+                    <p class="card-text">
+                        В дополнение к погодным данным, приложение предоставляет краткое описание города через API
+                        Wikipedia. Узнайте больше об истории и интересных фактах о выбранном вами месте.
+                    </p>
+
+                    <p class="card-text">
+                        Кроме того, проект включает интеграцию с картой от OpenWeather. Эта карта отображает не только
+                        географическое положение выбранного города, но и визуализирует погодные условия в реальном
+                        времени.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Удобство использования и современные технологии</h5>
+                    <p class="card-text">
+                        Проект разработан с использованием Django, одного из самых популярных веб-фреймворков на Python.
+                        Для работы с данными используется Django REST Framework (DRF), который обеспечивает быстрый и
+                        эффективный доступ к данным через API.
+                    </p>
+                    <p class="card-text">
+                        Также проект включает JavaScript-скрипт,
+                        который обеспечивает динамическое обновление интерфейса и взаимодействие с API OpenWeather и
+                        Wikipedia
+                    </p>
+                    <p class="card-text">
+                        В проекте также применяются современные веб-технологии, такие как GSAP (GreenSock Animation
+                        Platform), что позволяет добавить плавные анимации и улучшить взаимодействие с пользователем.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
-
-    <!-- Card 2: Историческая информация о городе -->
-    <div class="col-lg-4">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Информация о городе</h5>
-                <p class="card-text">
-                    В дополнение к погодным данным, приложение предоставляет краткое описание города через API Wikipedia. Узнайте больше об истории и интересных фактах о выбранном вами месте.
-                </p>
-
-                 <p class="card-text">
-                    Кроме того, проект включает интеграцию с картой от OpenWeather. Эта карта отображает не только географическое положение выбранного города, но и визуализирует погодные условия в реальном времени.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Card 3: Удобный и быстрый интерфейс -->
-<div class="col-lg-4">
-    <div class="card">
-        <div class="card-body">
-            <h5 class="card-title">Удобство использования и современные технологии</h5>
-            <p class="card-text">
-                Проект разработан с использованием Django, одного из самых популярных веб-фреймворков на Python. Для работы с данными используется Django REST Framework (DRF), который обеспечивает быстрый и эффективный доступ к данным через API.
-            </p>
-              <p class="card-text">
-                  Также проект включает JavaScript-скрипт,
-            который обеспечивает динамическое обновление интерфейса и взаимодействие с API OpenWeather и Wikipedia
-            </p>
-            <p class="card-text">
-                В проекте также применяются современные веб-технологии, такие как GSAP (GreenSock Animation Platform), что позволяет добавить плавные анимации и улучшить взаимодействие с пользователем.
-            </p>
-        </div>
-    </div>
-</div>
-       </div>
     <div class="img-intro text-center">
-    <img src="{% static 'images/skysvg3.svg' %}" alt="Sky SVG" class="img-fluid" style="width: 100px; height: auto;">
-</div>
+        <img src="{% static 'images/skysvg3.svg' %}" alt="Sky SVG" class="img-fluid"
+            style="width: 100px; height: auto;">
+    </div>
 </div>
 
 
