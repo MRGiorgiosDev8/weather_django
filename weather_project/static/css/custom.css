@@ -222,6 +222,10 @@ h2,
     border: 1px solid #ecececb2;
 }
 
+.intro-header,.card-body, .card-img {
+    box-shadow: 0px 4px 10px rgba(196, 196, 196, 0.1);
+}
+
 
 /* Media Mobile */
 
