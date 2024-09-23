@@ -212,12 +212,14 @@ h2,
 
 .card-body {
     background-color: #f8f9fa35;
-    border: 3px double #ecececb2
+    border: 3px double #ecececb2;
 }
 
 .card-img {
     opacity: 0.84;
     height: 238px;
+    /* border: 3px solid #ecececb2; */
+    border: 1px solid #ecececb2;
 }
 
 
@@ -291,7 +293,7 @@ h2,
 
     .intro-cards {
         margin-top: 4vh;
-        height: 1800px;
+        height: 1790px;
         gap: 7vh;
     }
 
@@ -332,7 +334,7 @@ h2,
     }
 
     #introContainer {
-        height: 1600px;
+        height: 1840px;
     }
 
     .img-intro {
@@ -342,6 +344,10 @@ h2,
     .intro-header {
         margin-top: 7vh;
         max-height: fit-content;
+    }
+
+    .card-img  {
+        height: 320px;
     }
 }
 
@@ -384,11 +390,31 @@ h2,
 
 /* Media XXL */
 
-@media (min-height: 1000px) {
+@media (min-height: 800px) {
 
     .map-container,
     #weatherInfo {
         height: 100%;
         margin-top: 6vh;
     }
+
+    .intro-images {
+        transform: translateY(-13vh);
+    }
+
+    .img-intro {
+        margin-top: 26vh;
+    }
+}
+
+@media (min-width: 1000px) and (max-width: 1199px) and (max-height: 700px) {
+    #introContainer {
+        height: 988px;
+    }
+
+    .img-intro {
+        margin-top: 66vh;
+    }
+
+
 }
