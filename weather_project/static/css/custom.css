@@ -291,9 +291,8 @@ h2,
 
     .intro-cards {
         margin-top: 4vh;
-        height: auto;
+        height: 1800px;
         gap: 7vh;
-        height: 300px;
     }
 
     .img-intro {
@@ -333,7 +332,7 @@ h2,
     }
 
     #introContainer {
-        height: 600px;
+        height: 1600px;
     }
 
     .img-intro {
