@@ -169,7 +169,7 @@ h2,
     margin-top: 14vh;
     height: 16px;
     padding: 0;
-    height: 300px;
+    height: 400px;
 }
 
 .intro-cards p {
@@ -183,7 +183,7 @@ h2,
 }
 
 #introContainer {
-    height: 600px;
+    height: 700px;
 }
 
 .container-height {
@@ -211,7 +211,11 @@ h2,
 }
 
 .card-body {
-    background-color: #dcdcdc0f
+    background-color: #f8f9fa35;
+}
+
+.card-img {
+    opacity: 0.9;
 }
 
 
