@@ -318,7 +318,7 @@ h2,
     }
 
     #introContainer {
-        height: auto;
+        height: 2400px;
     }
 
     .lead {
@@ -416,16 +416,18 @@ h2,
     .img-intro {
         margin-top: 26vh;
     }
+
+    #introContainer {
+        height: 900px;
+    }
 }
 
 @media (min-width: 1000px) and (max-width: 1199px) and (max-height: 700px) {
     #introContainer {
-        height: 988px;
+        height: auto;
     }
 
     .img-intro {
         margin-top: 66vh;
     }
-
-
 }
