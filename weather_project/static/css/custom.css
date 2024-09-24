@@ -67,9 +67,16 @@ hr {
     z-index: 1;
 }
 
-.text-danger {
+/* .text-danger {
     padding: 7px;
     border: 1px solid red;
+    border-radius: 7px;
+    z-index: 1000;
+} */
+
+#closeModal {
+    background-color: #aecab9;
+    color: white;
     border-radius: 7px;
 }
 

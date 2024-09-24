@@ -64,6 +64,38 @@ $(document).ready(function () {
         localStorage.setItem(city, JSON.stringify({ data, timestamp }));
     }
 
+    function showModal(message) {
+        const modalHtml = `
+            <div class="modal-window text-danger">
+                <p>${message}</p>
+                <button id="closeModal">Закрыть</button>
+            </div>`;
+        $('body').append(modalHtml);
+
+        $('#closeModal').on('click', function () {
+            $('.modal-window').remove();
+        });
+
+        $('.modal-window').css({
+            'position': 'fixed',
+            'top': '50%',
+            'left': '50%',
+            'transform': 'translate(-50%, -50%)',
+            'background-color': '#ce9898',
+            'padding': '20px',
+            'border': '2px solid red',
+            'border-radius': '10px',
+            'z-index': '1000',
+            'box-shadow': '0 5px 15px rgba(0, 0, 0, 0.3)'
+        });
+
+        setTimeout(function () {
+            $('.modal-window').fadeOut(300, function() {
+                $(this).remove();
+            });
+        }, 5000);
+    }
+
     $('#searchButton').on('click', async function () {
         let city = $('#cityInput').val();
         if (city) {
@@ -75,13 +107,13 @@ $(document).ready(function () {
                     const response = await fetch(`/api/weather/?city=${encodeURIComponent(city)}`);
                     const data = await response.json();
                     if (data.error) {
-                        $('#weatherInfo').html(`<p class="text-danger">${data.error}</p>`);
+                        showModal(`Ошибка: ${data.error}`);
                     } else {
                         setWeatherData(city, data);
                         updateWeatherUI(data);
                     }
                 } catch (error) {
-                    $('#weatherInfo').html(`<p class="text-danger">Произошла ошибка: ${error.message}</p>`);
+                    showModal(`Произошла ошибка: ${error.message}`);
                 }
             }
         }
