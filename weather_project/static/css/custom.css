@@ -71,7 +71,7 @@ hr {
   color: rgb(255, 74, 74);
   opacity: 1;
   font-family: "Playfair Display", serif;
-  font-size: 1.1em;
+  font-size: 1em;
 }
 
 #closeModal {
@@ -420,7 +420,7 @@ h2,
     }
 
     #introContainer {
-        height: 900px;
+        max-height: fit-content(3px);
     }
 }
 
