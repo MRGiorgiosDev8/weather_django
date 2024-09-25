@@ -110,7 +110,7 @@ $(document).ready(function () {
             scale: 0,
             opacity: 0,
             duration: 0.3,
-            ease: 'bounce.inOut',
+            ease: 'bounce.in',
             onComplete: function () {
                 $('.modal-window').remove();
             }
