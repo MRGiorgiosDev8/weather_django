@@ -73,7 +73,7 @@ $(document).ready(function () {
         $('body').append(modalHtml);
 
         $('#closeModal').on('click', function () {
-            $('.modal-window').remove();
+            closeModal();
         });
 
         $('.modal-window').css({
@@ -90,11 +90,31 @@ $(document).ready(function () {
             'box-shadow': '0 5px 15px rgba(0, 0, 0, 0.3)'
         });
 
+        gsap.fromTo('.modal-window', {
+            scale: 0,
+            opacity: 0
+        }, {
+            scale: 1,
+            opacity: 1,
+            duration: 0.8,
+            ease: 'power1.inOut'
+        });
+
         setTimeout(function () {
-            $('.modal-window').fadeOut(300, function() {
-                $(this).remove();
-            });
+            closeModal();
         }, 5000);
+    }
+
+    function closeModal() {
+        gsap.to('.modal-window', {
+            scale: 0,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power1.inOut',
+            onComplete: function () {
+                $('.modal-window').remove();
+            }
+        });
     }
 
     $('#searchButton').on('click', async function () {
