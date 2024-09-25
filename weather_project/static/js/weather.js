@@ -95,8 +95,8 @@ $(document).ready(function () {
             opacity: 0
         }, {
             scale: 1,
-            opacity: 1,
-            duration: 0.8,
+            opacity: 0.9,
+            duration: 0.3,
             ease: 'power1.inOut'
         });
 
@@ -109,7 +109,7 @@ $(document).ready(function () {
         gsap.to('.modal-window', {
             scale: 0,
             opacity: 0,
-            duration: 0.8,
+            duration: 0.3,
             ease: 'power1.inOut',
             onComplete: function () {
                 $('.modal-window').remove();
