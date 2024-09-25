@@ -228,6 +228,7 @@ h2,
 .card-body {
     background-color: #f8f9fa35;
     border: 3px double #ecececb2;
+    padding: 1vh;
 }
 
 .card-img {
@@ -409,7 +410,7 @@ h2,
 
 /* Media XXL */
 
-@media (min-height: 800px) {
+@media (min-height: 900px) {
 
     .map-container,
     #weatherInfo {
@@ -426,7 +427,7 @@ h2,
     }
 
     #introContainer {
-        max-height: fit-content(3px);
+        max-height: 2200px;
     }
 }
 
