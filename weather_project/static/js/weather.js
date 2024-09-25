@@ -97,7 +97,7 @@ $(document).ready(function () {
             scale: 1,
             opacity: 0.9,
             duration: 0.3,
-            ease: 'power1.inOut'
+            ease: 'bounce.inOut'
         });
 
         setTimeout(function () {
@@ -110,7 +110,7 @@ $(document).ready(function () {
             scale: 0,
             opacity: 0,
             duration: 0.3,
-            ease: 'power1.inOut',
+            ease: 'bounce.inOut',
             onComplete: function () {
                 $('.modal-window').remove();
             }
