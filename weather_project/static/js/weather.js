@@ -217,4 +217,56 @@ $(document).ready(function () {
         e.preventDefault();
         location.reload();
     });
+
+    async function fetchCities() {
+        const apiKey = '7e3d537e497ca75e7caafef828c47443';
+        const cityListUrl = `https://api.openweathermap.org/data/2.5/find?lat=55.7558&lon=37.6173&cnt=10&appid=${apiKey}&units=metric`;
+
+        try {
+            const response = await fetch(cityListUrl);
+            const data = await response.json();
+            if (data && data.list) {
+                populateCityDropdown(data.list);
+            } else {
+                console.error("Не удалось получить список городов");
+            }
+        } catch (error) {
+            console.error("Ошибка при получении городов:", error);
+        }
+    }
+
+    function populateCityDropdown(cities) {
+        const cityDropdown = $('#cityDropdown');
+        cityDropdown.empty();
+
+        cities.forEach(city => {
+            const cityItem = `<li><a class="dropdown-item" href="#" data-city="${city.name}">${city.name}</a></li>`;
+            cityDropdown.append(cityItem);
+        });
+
+        $('#cityDropdown a').on('click', async function (e) {
+            e.preventDefault();
+            const cityName = $(this).data('city');
+
+            const cachedData = getWeatherData(cityName);
+            if (cachedData) {
+                updateWeatherUI(cachedData);
+            } else {
+                try {
+                    const response = await fetch(`/api/weather/?city=${encodeURIComponent(cityName)}`);
+                    const data = await response.json();
+                    if (data.error) {
+                        showModal(`Ошибка: ${data.error}`);
+                    } else {
+                        setWeatherData(cityName, data);
+                        updateWeatherUI(data);
+                    }
+                } catch (error) {
+                    showModal(`Произошла ошибка: ${error.message}`);
+                }
+            }
+        });
+    }
+
+    fetchCities();
 });
