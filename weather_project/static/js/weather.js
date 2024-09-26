@@ -1,6 +1,47 @@
 $(document).ready(function () {
     let map;
 
+    const cities = [
+        { name: 'London', country: 'UK' },
+        { name: 'Paris', country: 'France' },
+        { name: 'Milan', country: 'Italy' },
+        { name: 'New York', country: 'USA' },
+        { name: 'Tokyo', country: 'Japan' },
+        { name: 'Sydney', country: 'Australia' },
+        { name: 'Berlin', country: 'Germany' },
+        { name: 'Moscow', country: 'Russia' },
+        { name: 'Toronto', country: 'Canada' },
+        { name: 'Beijing', country: 'China' },
+        { name: 'Dubai', country: 'UAE' },
+        { name: 'Rio de Janeiro', country: 'Brazil' },
+        { name: 'Mexico City', country: 'Mexico' },
+        { name: 'Los Angeles', country: 'USA' },
+        { name: 'Cape Town', country: 'South Africa' },
+        { name: 'Buenos Aires', country: 'Argentina' },
+        { name: 'Cairo', country: 'Egypt' },
+        { name: 'Delhi', country: 'India' },
+        { name: 'Bangkok', country: 'Thailand' },
+        { name: 'Rome', country: 'Italy' },
+        { name: 'Madrid', country: 'Spain' },
+        { name: 'Barcelona', country: 'Spain' },
+        { name: 'Lisbon', country: 'Portugal' },
+        { name: 'Istanbul', country: 'Turkey' },
+        { name: 'Vienna', country: 'Austria' },
+        { name: 'Zurich', country: 'Switzerland' },
+        { name: 'Athens', country: 'Greece' },
+        { name: 'Brussels', country: 'Belgium' },
+        { name: 'Warsaw', country: 'Poland' },
+        { name: 'Amsterdam', country: 'Netherlands' },
+        { name: 'Copenhagen', country: 'Denmark' },
+        { name: 'Stockholm', country: 'Sweden' },
+        { name: 'Helsinki', country: 'Finland' },
+        { name: 'Oslo', country: 'Norway' },
+        { name: 'Reykjavik', country: 'Iceland' },
+        { name: 'Seoul', country: 'South Korea' },
+        { name: 'Hong Kong', country: 'China' },
+        { name: 'Singapore', country: 'Singapore' }
+    ];
+
     function createForecastHtml(forecasts) {
         let forecastHtml = '';
         forecasts.forEach(forecast => {
@@ -218,29 +259,12 @@ $(document).ready(function () {
         location.reload();
     });
 
-    async function fetchCities() {
-        const apiKey = '7e3d537e497ca75e7caafef828c47443';
-        const cityListUrl = `https://api.openweathermap.org/data/2.5/find?lat=55.7558&lon=37.6173&cnt=10&appid=${apiKey}&units=metric`;
-
-        try {
-            const response = await fetch(cityListUrl);
-            const data = await response.json();
-            if (data && data.list) {
-                populateCityDropdown(data.list);
-            } else {
-                console.error("Не удалось получить список городов");
-            }
-        } catch (error) {
-            console.error("Ошибка при получении городов:", error);
-        }
-    }
-
-    function populateCityDropdown(cities) {
+    function populateCityDropdown() {
         const cityDropdown = $('#cityDropdown');
         cityDropdown.empty();
 
         cities.forEach(city => {
-            const cityItem = `<li><a class="dropdown-item" href="#" data-city="${city.name}">${city.name}</a></li>`;
+            const cityItem = `<li><a class="dropdown-item" href="#" data-city="${city.name}">${city.name}, ${city.country}</a></li>`;
             cityDropdown.append(cityItem);
         });
 
@@ -268,5 +292,5 @@ $(document).ready(function () {
         });
     }
 
-    fetchCities();
+    populateCityDropdown();
 });
