@@ -218,7 +218,8 @@ $(document).ready(function () {
             'background-color': '#f8f9fa99',
             'border-radius': '11px',
             'padding': '0',
-            'text-align': 'center'
+            'text-align': 'center',
+            'color': 'black'
         });
 
         if ($('h1:contains("Map")').length === 0) {
