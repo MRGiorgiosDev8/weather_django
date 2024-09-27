@@ -276,8 +276,7 @@ h2,
     width: 80%;
     height: 2px;
     background-color: #a4c9b3d8;
-    border-radius: 11px;
-    box-shadow: 0 0 4px #c1e1cb; 
+    box-shadow: 0 0 4px #c1e1cb;
     transform-origin: center; 
 }
 
@@ -286,9 +285,6 @@ h2,
     box-shadow: none !important; 
 }
 
-.dropdown-menu {
-    display: none; /* Скрыть выпадающее меню по умолчанию */
-}
 
 /* Media Mobile */
 
