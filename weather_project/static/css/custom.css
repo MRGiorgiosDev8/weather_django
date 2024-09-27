@@ -256,6 +256,30 @@ h2,
     border-radius: 3px;
 }
 
+.nav-link {
+    font-family: "Playfair Display", serif;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+}
+
+.nav-link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.nav-link .line {
+    position: absolute;
+    bottom: 0;
+    left: 47%; 
+    transform: translateX(-50%) scaleX(0); 
+    width: 80%;
+    height: 2px;
+    background-color: #a4c9b3d8;
+    border-radius: 11px;
+    box-shadow: 0 0 5px #c1e1cb; 
+    transform-origin: center; 
+}
 
 /* Media Mobile */
 
