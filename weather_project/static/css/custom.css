@@ -80,7 +80,7 @@ hr {
     border-radius: 4px;
     border: 1px solid #659c78;
     opacity: 1;
-    transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.1s;
 }
 
 #closeModal:hover {
@@ -277,7 +277,7 @@ h2,
     height: 2px;
     background-color: #a4c9b3d8;
     border-radius: 11px;
-    box-shadow: 0 0 5px #c1e1cb; 
+    box-shadow: 0 0 4px #c1e1cb; 
     transform-origin: center; 
 }
 
@@ -286,6 +286,9 @@ h2,
     box-shadow: none !important; 
 }
 
+.dropdown-menu {
+    display: none; /* Скрыть выпадающее меню по умолчанию */
+}
 
 /* Media Mobile */
 
