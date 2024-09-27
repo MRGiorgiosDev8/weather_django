@@ -281,6 +281,12 @@ h2,
     transform-origin: center; 
 }
 
+.nav-link:focus, .nav-link:active {
+    outline: none !important; 
+    box-shadow: none !important; 
+}
+
+
 /* Media Mobile */
 
 @media (max-width: 768px) {
