@@ -401,6 +401,10 @@ h2,
         outline: none !important;
         box-shadow: none !important;
     }
+
+    .font-span {
+        font-size: 1.1em;
+    }
 }
 
 @media (min-width: 769px) and (max-width: 991px) {
