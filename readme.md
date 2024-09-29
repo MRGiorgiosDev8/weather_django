@@ -90,3 +90,13 @@ const response = await fetch(`/api/weather/?city=${encodeURIComponent(city)}`);
 const timestamp = new Date().getTime();
 localStorage.setItem(city, JSON.stringify({ data, timestamp }));
 ```
+
+### Использование API Wikipedia
+
+При запросе данных о погоде (API OpenWeather) приложение отправляет параллельный запрос к Wikipedia API. На основе названия города API возвращает краткое описание города, которое затем отображается в интерфейсе вместе с погодными данными.
+
+В коде `views.py` API для погоды используется следующий URL для запроса информации о городе:
+```python
+wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}?redirect=true'
+```
+- Этот запрос позволяет получить краткое описание страницы города на русском языке.
