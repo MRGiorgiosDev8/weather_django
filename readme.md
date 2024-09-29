@@ -113,6 +113,7 @@ function initializeMap(lat, lon) {
     if (map) {
         map.remove();
     }
+    # Установка координат
     map = L.map('map').setView([lat, lon], 10);
     #  Добавляем слой OpenStreetMap
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
