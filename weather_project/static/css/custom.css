@@ -22,7 +22,7 @@ h1 {
 .intro {
     background-color: transparent;
     border: none;
-    color: #484747dc;
+    color: #353434dc;
     filter: contrast(1.3);
 }
 
@@ -50,7 +50,7 @@ h2,
 .card-title {
     font-family: "Yeseva One", serif;
     opacity: 0.9;
-    color: #666666;
+    color: #454545;
     filter: contrast(1.1);
 }
 
@@ -154,7 +154,7 @@ h2,
     font-weight: 600;
     font-style: normal;
     font-size: 1.3em;
-    color: #555555dc;
+    color: #434343dc;
     letter-spacing: 0.7px;
     filter: contrast(1.3);
 }
