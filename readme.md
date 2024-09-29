@@ -100,3 +100,31 @@ localStorage.setItem(city, JSON.stringify({ data, timestamp }));
 wiki_url = f'https://ru.wikipedia.org/api/rest_v1/page/summary/{city}?redirect=true'
 ```
 - Этот запрос позволяет получить краткое описание страницы города на русском языке.
+
+### Использование карты и библиотеки Leaflet
+
+1. **Инициализация карты**:
+   - Карта интегрирована с помощью библиотеки **Leaflet** через функцию `initializeMap(lat, lon)`, которая создает карту на основе координат города.
+   - Карта загружается с помощью  **OpenStreetMap**, а погодные данные добавляются как дополнительный слой через **API OpenWeather**.
+
+Обзор кода:
+```python
+function initializeMap(lat, lon) {
+    if (map) {
+        map.remove();
+    }
+    map = L.map('map').setView([lat, lon], 10);
+    #  Добавляем слой OpenStreetMap
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+    # API-ключ для OpenWeatherMap 
+    const apiKey = '7e3d537e497ca75e7caafef828c47443';
+    # Слой для отображения погодных данных на карте
+    const weatherLayer = L.tileLayer(`http://tile.openweathermap.org/map/temp_new/{z}/{x}/{y}.png?appid=${apiKey}`, {
+        attribution: '&copy; OpenWeatherMap'
+    });
+    # Добавляем слой с погодными данными на карту
+    weatherLayer.addTo(map);
+}
+```
