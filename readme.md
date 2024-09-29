@@ -38,7 +38,7 @@ OpenWeather — это популярный и надежный сервис, п
 
 ### Добавление API-ключа OpenWeather
 
-Чтобы добавить ваш API-ключ OpenWeather в проект WeatherSphereApp, внесите его в код. Ниже приведен пример, как это сделать в файле views.py:
+Чтобы добавить ваш API-ключ OpenWeather в проект WeatherSphereApp, внесите его в код. Ниже приведен пример, как это сделать в файле `views.py`:
 
 ### Пример кода
 
@@ -49,4 +49,6 @@ class WeatherView(APIView):
         api_key = '7e3d537e497ca75e7caafef828c47443'
         city = request.GET.get('city', 'Moscow')
 ```
+
+[Получите ваш API-ключ на OpenWeather](https://openweathermap.org/)
 
