@@ -147,7 +147,7 @@ function initializeMap(lat, lon) {
 
 Мой проект также размещен на хостинге PythonAnywhere. Вы можете посетить его по следующей ссылке:
 
-[WeatherSphereApp на PythonAnywhere](https://georgios7.pythonanywhere.com/)
+<a href="https://georgios7.pythonanywhere.com/" target="_blank">WeatherSphereApp на PythonAnywhere</a>
 
 
 
