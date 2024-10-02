@@ -2,6 +2,7 @@
 ![Repository size](https://img.shields.io/github/repo-size/MRGiorgiosDev8/weather_django)
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-informational)
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/y/MRGiorgiosDev8/weather_django)
+![License](https://img.shields.io/github/license/MRGiorgiosDev8/weather_django?color=blue)
 
 # WeatherSphereApp
 
