@@ -335,6 +335,7 @@ h2,
 
     .text-danger {
         margin-right: 7vh;
+        width: 400px;
     }
 
     .map-container {
@@ -414,11 +415,9 @@ h2,
     }
 
     .text-danger p {
-        font-size: 0.7em;
-    }
-
-    .text-danger {
-        width: 400px;
+        font-size: 0.83em;
+        white-space: nowrap;
+        transform: translateX(-11px);
     }
 
     #closeModal {
