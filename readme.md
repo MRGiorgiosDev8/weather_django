@@ -1,9 +1,9 @@
 # WeatherSphereApp
-![GitHub last commit](https://img.shields.io/github/last-commit/MRGiorgiosDev8/weather_django?color=blue)
-![Repository size](https://img.shields.io/github/repo-size/MRGiorgiosDev8/weather_django)
+![GitHub last commit](https://img.shields.io/github/last-commit/MRGiorgiosDev8/django-moviefinder-api?color=blue)
+![Repository size](https://img.shields.io/github/repo-size/MRGiorgiosDev8/django-moviefinder-api)
 ![Platform](https://img.shields.io/badge/platform-linux%20%7C%20macos%20%7C%20windows-informational)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/MRGiorgiosDev8/weather_django)
-![License](https://img.shields.io/github/license/MRGiorgiosDev8/weather_django?color=blue)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/y/MRGiorgiosDev8/django-moviefinder-api)
+![License](https://img.shields.io/github/license/MRGiorgiosDev8/django-moviefinder-api?color=blue)
 
 WeatherSphereApp — это веб-приложение, которое предоставляет информацию о погоде в любом городе мира с помощью API OpenWeather и дополнительные сведения о городе через API Wikipedia. Приложение создано на основе Django и Django Rest Framework (DRF) на серверной части, а также JavaScript для динамического обновления интерфейса и взаимодействия с API OpenWeather и Wikipedia. Для анимации интерфейса используется GSAP.
 

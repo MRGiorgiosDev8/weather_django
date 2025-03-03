@@ -192,7 +192,7 @@ $(document).ready(function () {
             $('.map-container').append(mapContainer);
         }
 
-        const forecastHtml = `<h2>${data.city} <img src="/static/images/iconarrow.png" alt="arrow" class="symbol-arrow" /></h2>` + createForecastHtml(data.forecasts);
+        const forecastHtml = `<h2>${data.city} <img src="/static/images/iconarrow.svg" alt="arrow" class="symbol-arrow" /></h2>` + createForecastHtml(data.forecasts);
 
         const cityInfoHtml = createCityInfoHtml(data.wiki_summary);
 
