@@ -50,7 +50,9 @@ h2,
 .card-title {
     font-family: "Yeseva One", serif;
     opacity: 0.9;
-    color: #454545;
+    color: #5b5b5b;
+    border-bottom: 1.6px solid #dbdbdb;
+    border-radius: 3px;
     filter: contrast(1.1);
 }
 
