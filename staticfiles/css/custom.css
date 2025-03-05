@@ -223,7 +223,7 @@ h2,
 .intro-images {
     transform: translateY(-16vh);
     padding: 0;
-    opacity: 0.8;
+    opacity: 0.83;
 }
 
 .card-body {
@@ -319,7 +319,7 @@ h2,
     }
 
     .brand-span {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     #navbarSearchForm {
@@ -335,10 +335,12 @@ h2,
 
     .text-danger {
         margin-right: 7vh;
+        width: 400px;
     }
 
     .map-container {
         margin-left: 3vh;
+        margin-top: -8vh;
     }
 
     .city-info {
@@ -373,7 +375,6 @@ h2,
 
     .img-intro {
         display: none;
-
     }
 
     .intro {
@@ -411,6 +412,16 @@ h2,
 
     .font-span {
         font-size: 1.1em;
+    }
+
+    .text-danger p {
+        font-size: 0.83em;
+        white-space: nowrap;
+        transform: translateX(-11px);
+    }
+
+    #closeModal {
+        font-size: 0.9em;
     }
 }
 
@@ -482,8 +493,6 @@ h2,
 /* Media XXL */
 
 @media (min-height: 900px) {
-
-    .map-container,
     #weatherInfo {
         height: 100%;
         margin-top: 6vh;
